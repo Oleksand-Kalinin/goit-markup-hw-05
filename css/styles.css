@@ -444,8 +444,12 @@ section {
     align-items: baseline;
 }
 
-.footer-flex-item:not(:last-child) {
+.footer-flex-item:nth-child(1) {
     margin-right: 120px;
+}
+
+.footer-flex-item:nth-child(2) {
+    margin-right: 80px;
 }
 
 .page-footer .logo {
@@ -510,4 +514,106 @@ section {
     fill: #f4f4fd;
 }
 
+.subscribe {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.form-footer {
+    display: flex;
+}
+
+.input-subscribe {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    margin-right: 24px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.input-subscribe::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.btn-subscribe-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 24px;
+    min-width: 165px;
+    background-color: #4d5ae5;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #fff;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-subscribe-footer:hover,
+.btn-subscribe-footer:focus {
+    background-color: #404BBF;
+}
+
+
+.subscribe-footer-icon {
+    fill: #ffffff;
+}
+
 /* ======= /Footer-styles ======= */
+
+/* ======= Modal window ======= */
+
+.window-form-order-service {
+    background: #fcfcfc;
+    box-shadow:
+        0 1px 1px 0 rgba(0, 0, 0, 0.14),
+        0 1px 3px 0 rgba(0, 0, 0, 0.12),
+        0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    width: 408px;
+    padding: 74px 24px 24px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.btn-close-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: #e7e9fc;
+    fill: #2e2f42;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+.desc-form {
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    margin-bottom: 16px;
+}

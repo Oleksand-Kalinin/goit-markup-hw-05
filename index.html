@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <!-- Page header -->
+    <!-- Header -->
     <header class="page-header">
       <div class="container">
         <nav class="navigation-menu">
@@ -396,7 +396,7 @@
         </div>
       </section>
 
-      <!-- Section Porfolio -->
+      <!-- Section Porfolio (Forth) -->
       <section id="Portfolio" class="our-portfolio">
         <div class="container">
           <h2 class="our-portfolio-title">Our portfolio</h2>
@@ -540,6 +540,7 @@
       </section>
     </main>
 
+    <!-- Footer -->
     <footer class="page-footer">
       <div class="container footer-flex-container">
         <div class="footer-flex-item">
@@ -589,7 +590,82 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-flex-item">
+          <p class="subscribe">Subscribe</p>
+          <form class="form-footer">
+            <input class="input-subscribe" type="email" placeholder="E-mail" />
+            <button class="btn-subscribe-footer" type="button">
+              Subscribe
+              <svg class="subscribe-footer-icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe-footer-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="modal-window-container">
+      <div class="window-form-order-service">
+        <button class="btn-close-form" type="button">
+          <svg class="close-icon-form" width="8" height="8">
+            <use href="./images/icons.svg#close-form-icon"></use>
+          </svg>
+        </button>
+
+        <p class="desc-form">Leave your contacts and we will call you back</p>
+
+        <form
+          class="form-order-service"
+          name="order-service-form"
+          autocomplete="off"
+          novalidate
+        >
+          <label class="form-label-order-service" for="user-name"> Name </label>
+          <input
+            class="form-input-order-service"
+            id="user-name"
+            name="user-name"
+            type="text"
+          />
+
+          <label class="form-label-order-service" for="user-phone">
+            Phone
+          </label>
+          <input
+            class="form-input-order-service"
+            id="user-phone"
+            name="user-phone"
+            type="tel"
+          />
+
+          <label class="form-label-order-service" for="user-email">
+            Email
+          </label>
+          <input
+            class="form-input-order-service"
+            id="user-email"
+            name="user-email"
+            type="email"
+          />
+
+          <label class="form-label-order-service" for="comment">
+            Comment
+          </label>
+          <textarea
+            class="form-input-order-service"
+            id="comment"
+            name="comment"
+            rows="3"
+            placeholder="Text input"
+          ></textarea>
+
+          <input type="checkbox" name="privacy-policy" id="" value="true" />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
