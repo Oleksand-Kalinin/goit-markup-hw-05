@@ -212,7 +212,7 @@ section {
 /* ======= /Section-hero-styles ======= */
 
 /* ======= Our-advantages-styles ======= */
-.our-advantages-title {
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -449,7 +449,7 @@ section {
 }
 
 .footer-flex-item:nth-child(2) {
-    margin-right: 80px;
+    margin-right: auto;
 }
 
 .page-footer .logo {
@@ -580,7 +580,27 @@ section {
 
 /* ======= Modal window ======= */
 
-.window-form-order-service {
+.backdrop-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 47, 66, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop-form.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-window-form-order-service {
     background: #fcfcfc;
     box-shadow:
         0 1px 1px 0 rgba(0, 0, 0, 0.14),
@@ -589,9 +609,10 @@ section {
     border-radius: 4px;
     width: 408px;
     padding: 74px 24px 24px 24px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .btn-close-form {
@@ -601,12 +622,25 @@ section {
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #e7e9fc;
     fill: #2e2f42;
     position: absolute;
     top: 24px;
     right: 24px;
+    transition:
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close-form:hover,
+.btn-close-form:focus {
+    fill: #fcfcfc;
+    background-color: #404bbf;
+    border-color: #404bbf;
+    outline: transparent;
 }
 
 .desc-form {
@@ -616,4 +650,124 @@ section {
     text-align: center;
     color: #2e2f42;
     margin-bottom: 16px;
+}
+
+.label-form-wrapper {
+    margin-bottom: 8px;
+}
+
+.form-label-order-service {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    margin-bottom: 4px;
+}
+
+.input-form-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+}
+
+.form-input-order-service {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    padding-left: 38px;
+}
+
+.form-input-order-service:focus+.form-icon {
+    fill: #4d5ae5;
+}
+
+.form-input-order-service:focus {
+    border-color: #4d5ae5;
+    outline: transparent;
+}
+
+.form-icon {
+    position: absolute;
+    left: 16px;
+}
+
+.form-input-comment-order-service {
+    width: 100%;
+    resize: none;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 120px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+}
+
+.form-input-comment-order-service:focus {
+    border-color: #4d5ae5;
+    outline: transparent;
+}
+
+.privacy-policy-wrapper {
+    margin-bottom: 24px;
+}
+
+.label-privacy-policy {
+    margin-bottom: 0;
+}
+
+.checkbox-privacy-policy:checked+.label-privacy-policy .mark-checkbox {
+    fill: #f4f4fd;
+    background-color: #404BBF;
+}
+
+.checkbox-privacy-policy:focus+.label-privacy-policy .mark-checkbox {
+    outline: auto;
+}
+
+.mark-checkbox {
+    display: inline-flex;
+    width: 16px;
+    height: 16px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    margin-right: 8px;
+    fill: none;
+    cursor: pointer;
+}
+
+.privacy-policy-link {
+    line-height: 1.33333;
+    text-decoration: underline;
+    color: #4d5ae5;
+}
+
+.btn-send {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    min-width: 169px;
+    background-color: #4d5ae5;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-send:hover,
+.btn-send:focus {
+    background-color: #404BBF;
 }
