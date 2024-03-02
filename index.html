@@ -594,7 +594,14 @@
         <div class="footer-flex-item">
           <p class="subscribe">Subscribe</p>
           <form class="form-footer">
-            <input class="input-subscribe" type="email" placeholder="E-mail" />
+            <label class="label-form-footer">
+              <input
+                class="input-subscribe"
+                name="input-subscribe"
+                type="email"
+                placeholder="E-mail"
+              />
+            </label>
             <button class="btn-subscribe-footer" type="button">
               Subscribe
               <svg class="subscribe-footer-icon" width="24" height="24">
@@ -679,16 +686,18 @@
             </div>
           </div>
 
-          <label class="form-label-order-service" for="comment">
-            Comment
-          </label>
+          <div class="comment-wrapper">
+            <label class="form-label-order-service" for="comment">
+              Comment
+            </label>
 
-          <textarea
-            class="form-input-comment-order-service"
-            id="comment"
-            name="comment"
-            placeholder="Text input"
-          ></textarea>
+            <textarea
+              class="form-input-comment-order-service"
+              id="comment"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
 
           <div class="privacy-policy-wrapper">
             <input
