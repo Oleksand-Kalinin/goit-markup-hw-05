@@ -678,10 +678,9 @@ section {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding-left: 38px;
-}
-
-.form-input-order-service:focus+.form-icon {
-    fill: #4d5ae5;
+    transition:
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input-order-service:focus {
@@ -692,6 +691,14 @@ section {
 .form-icon {
     position: absolute;
     left: 16px;
+    fill: #2e2f42;
+    transition:
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.form-input-order-service:focus+.form-icon {
+    fill: #4d5ae5;
 }
 
 .form-input-comment-order-service {
